@@ -33,13 +33,16 @@ class AudioActivity : AppCompatActivity() {
 
         //Setting up the mediaplayer to stream Music
 
-        val audioDataSource = ""
+        val audioDataSource =
+                "android.resource://com.raywenderlich.implayee/" + R.raw.parkly
         try {
             mp.setDataSource(this, Uri.parse(audioDataSource))
             mp.prepare()
         } catch (e: Exception) {
             e.printStackTrace()
         }
+        initViews()
+        onClicks()
 
     }
 
