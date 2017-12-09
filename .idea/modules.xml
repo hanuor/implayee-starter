@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Implayee.iml" filepath="$PROJECT_DIR$/Implayee.iml" />
+      <module fileurl="file://D:\NewApps\starters\implayee\Implayee.iml" filepath="D:\NewApps\starters\implayee\Implayee.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\NewApps\starters\implayee\app\app.iml" filepath="D:\NewApps\starters\implayee\app\app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/implayee.iml" filepath="$PROJECT_DIR$/implayee.iml" />
     </modules>
   </component>
 </project>
