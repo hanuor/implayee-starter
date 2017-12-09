@@ -7,7 +7,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:background="#212121"
+        android:background="@color/colorBlack"
         android:layout_height="match_parent">
 
         <Button
@@ -15,9 +15,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@+id/playVideoButton"
-            android:layout_alignEnd="@+id/playVideoButton"
-            android:layout_alignRight="@+id/playVideoButton"
-            android:layout_marginBottom="73dp"
+            android:layout_alignLeft="@+id/playVideoButton"
+            android:layout_alignStart="@+id/playVideoButton"
+            android:layout_marginBottom="11dp"
+            android:textAllCaps="false"
             android:text="Play Audio" />
 
         <Button
@@ -26,15 +27,17 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:textAllCaps="false"
             android:text="Play Video" />
 
         <Button
             android:id="@+id/exoPlayerButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/playVideoButton"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="128dp"
+            android:layout_marginTop="11dp"
+            android:textAllCaps="false"
             android:text="Play Video using ExoPlayer" />
     </RelativeLayout>
 

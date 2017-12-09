@@ -23,7 +23,7 @@ class VideoActivity : AppCompatActivity() {
             e.printStackTrace()
             Toast.makeText(this, "Can't play the video right now", Toast.LENGTH_SHORT).show()
         }
-        val sv = findViewById<View>(R.id.surfaceView1) as SurfaceView
+        val sv = findViewById<View>(R.id.surfaceView) as SurfaceView
         playPauseButton = findViewById(R.id.playPauseButton)
 
         playPauseButton?.setOnClickListener({

@@ -27,16 +27,16 @@ class MainActivity : AppCompatActivity() {
 
     fun onClicks() {
         playAudioButton?.setOnClickListener({
-            var intt = Intent(this, AudioActivity::class.java)
-            startActivity(intt)
+            var triggerAudio = Intent(this, AudioActivity::class.java)
+            startActivity(triggerAudio)
         })
         playVideoButton?.setOnClickListener({
-            var intt = Intent(this, VideoActivity::class.java)
-            startActivity(intt)
+            var triggerVideo = Intent(this, VideoActivity::class.java)
+            startActivity(triggerVideo)
         })
         exoPlayerButton?.setOnClickListener({
-            var intt = Intent(this, ExoPlayerActivity::class.java)
-            startActivity(intt)
+            var triggerExo = Intent(this, ExoPlayerActivity::class.java)
+            startActivity(triggerExo)
         })
     }
 }
