@@ -23,7 +23,7 @@ import android.widget.Button
  * limitations under the License.
  */
 class AudioActivity : AppCompatActivity() {
-    var playAudio: Button? = null
+    var playPauseAudio: Button? = null
     var pauseAudio: Button? = null
     var restartAudio: Button? = null
     val mp = MediaPlayer()
@@ -38,6 +38,7 @@ class AudioActivity : AppCompatActivity() {
         try {
             mp.setDataSource(this, Uri.parse(audioDataSource))
             mp.prepare()
+            mp.start()
         } catch (e: Exception) {
             e.printStackTrace()
         }
@@ -47,29 +48,23 @@ class AudioActivity : AppCompatActivity() {
     }
 
     fun initViews() {
-        //play audio button (mediaplayer class)
-        playAudio = findViewById(R.id.playAudio)
-        //pause Audio button (mediaplayer class)
-        pauseAudio = findViewById(R.id.pauseAudio)
+        //play / pause audio button (mediaplayer class)
+        playPauseAudio = findViewById(R.id.playPauseAudio)
+
         //restart Audio button
         restartAudio = findViewById(R.id.restartAudio)
     }
 
     fun onClicks() {
-        playAudio?.setOnClickListener({
-            if(!mp.isPlaying){
-                try {
-                    mp.start()
-                } catch (e: Exception) {
-                    e.printStackTrace()
-                }
+        playPauseAudio?.setOnClickListener({
+            if (mp.isPlaying) {
+                mp.pause()
+                playPauseAudio?.text = "Play Audio"
+            } else {
+                mp.start()
+                playPauseAudio?.text = "Pause Audio"
             }
 
-        })
-        pauseAudio?.setOnClickListener({
-            if(mp.isPlaying()){
-                mp.pause();
-            }
         })
         restartAudio?.setOnClickListener({
             mp.seekTo(0)
