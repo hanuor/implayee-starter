@@ -22,7 +22,7 @@ class AudioActivity : AppCompatActivity() {
 
     }
 
-    fun initViews() {
+    private fun initViews() {
         //play / pause audio button (mediaplayer class)
         playPauseAudio = findViewById(R.id.playPauseAudio)
 
@@ -30,7 +30,7 @@ class AudioActivity : AppCompatActivity() {
         restartAudio = findViewById(R.id.restartAudio)
     }
 
-    fun onClicks() {
+    private fun onClicks() {
         playPauseAudio?.setOnClickListener({
         })
         restartAudio?.setOnClickListener({
